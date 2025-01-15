@@ -34,6 +34,20 @@ public class Matriz {
         return new Dimension(datos.length, datos[0].length);
     }
     
+    public static Matriz traspuestaMatriz(Matriz matriz) {
+
+        int i, j, filas, columnas;
+        filas = matriz.getDimension().height;
+        columnas = matriz.getDimension().width;
+        Matriz matrizResultante = new Matriz(columnas, filas, false);
+        for (j = 0; j < filas; j++) {
+            for (i = 0; i < columnas; i++) {
+                matrizResultante.datos[j][i] += matriz.datos[i][j];
+            }
+        }
+        return matrizResultante;
+    }
+
     public static Matriz sumarDosMatrices(Matriz a, Matriz b) throws DimensionesIncompatibles { 
         if(! a.getDimension().equals(b.getDimension())) throw new DimensionesIncompatibles("La suma de matrices requiere matrices de las mismas dimensiones");        
         int i, j, filasA, columnasA; 
