@@ -1,11 +1,14 @@
-import matrices.MatrizTest;
-
+import matrices.MultiplicacionTest;
+import matrices.OperacionCompuestaTest;
+import matrices.TrasponerTest;
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectClasses({
-        MatrizTest.class
+        MultiplicacionTest.class,
+        OperacionCompuestaTest.class,
+        TrasponerTest.class
 })
 public class AllTests {
 }
