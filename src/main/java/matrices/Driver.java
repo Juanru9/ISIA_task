@@ -2,8 +2,6 @@ package matrices;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import matrices.DimensionesIncompatibles;
-import matrices.Matriz;
 
 public class Driver {
 
